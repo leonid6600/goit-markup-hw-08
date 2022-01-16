@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"/> -->
   <link rel="stylesheet" href="./css/main.min.css">
 
 </head>
@@ -20,8 +19,7 @@
   <header class="header">
     <div class="container aligin">
       <a href="./index.html" class="logo"><span class="brand-color">Web</span>Studio</a>
-     
-      
+           
       <!-- (работает с помошюью скрипта "menu.js") -->
       <div class="menu-container" id="menu-container" data-menu>
         <nav>
@@ -50,8 +48,32 @@
             </a>
           </li>
         </ul>
-      </div>
 
+        <!-- Иконки соц. сетей в меню для мобилки -->
+        <ul class="menu-container__links">
+          <li>
+            <a href="#" class="link__social" aria-label="Ссылка на Инстаграм">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link__social" aria-label="Ссылка на Тивттер">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link__social" aria-label="Ссылка на Фейсбук">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link__social" aria-label="Ссылка на Линкедин">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+
+      </div>
 
       <!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
       <button tupe="button" class="burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
@@ -60,8 +82,6 @@
           <use class="burger__close" href="./images/icon/icons.svg#icon-close-menu"></use>
         </svg>
       </button>
-
-
 
     </div>
   </header>
@@ -127,19 +147,28 @@
       <ul class="services__list">
         <li>
           <a href="/" class="link" aria-label="web site link">
-            <img src="images/album/tablet-01.jpg" width="370" alt="Планшет и клавиатура">
+
+            <img srcset="images/album/tablet-01.jpg 1x, images/album/tablet-01@2x.jpg 2x"
+            src="images/album/tablet-01.jpg" alt="Планшет и клавиатура">
+
             <p class="services__signature">Десктопные приложения</p>
           </a>
         </li>
         <li>
           <a href="/" class="link" aria-label="annexes link">
-            <img src="images/album/laptop-01.jpg" width="370" alt="Ноутбук и телефон">
+
+            <img srcset="images/album/laptop-01.jpg 1x, images/album/laptop-01@2x.jpg 2x"
+            src="images/album/laptop-01.jpg" alt="Ноутбук и телефон">
+
             <p class="services__signature">Мобильные приложения </p>
           </a>
         </li>
         <li>
           <a href="/" class="link" aria-label="design link">
-            <img src="images/album/tablet-02.jpg" width="370" alt="Графисеский планшет и стилус">
+
+            <img srcset="images/album/tablet-02.jpg 1x, images/album/tablet-02@2x.jpg 2x"
+            src="images/album/tablet-02.jpg" alt="Графисеский планшет и стилус">
+
             <p class="services__signature">Дизайнерские решения</p>
           </a>
         </li>
@@ -153,10 +182,72 @@
         <h2 class="title team__title">Наша команда</h2>
         <ul class="team__list">
           <li>
-            <img width="270" src="images/team/produkt.jpg" alt="мужчина в очках">
-              <div class="team__description">
-                <h3 class="title description__title">Игорь Демьяненко</h3>
-                <p class="description__text">Product Designer</p>
+            
+            <!-- <img srcset="
+            images/team/produkt-270.jpg  270w,
+            images/team/produkt-540.jpg  540w,
+            images/team/produkt-810.jpg  810w 
+            "
+            src="images/team/produkt-270.jpg" alt="мужчина в очках"
+            sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
+            > -->
+
+            <img srcset="images/team/produkt-270.jpg 1x, images/team/produkt-540.jpg 2x" src="images/team/produkt-270.jpg"
+              alt="Планшет и клавиатура">
+            
+            <div class="team__description">
+              <h3 class="title description__title">Игорь Демьяненко</h3>
+              <p class="description__text">Product Designer</p>
+              <ul class="description__icons">
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+          <li>
+            
+              <!-- <img srcset="
+            images/team/frontend-270.jpg  270w,
+            images/team/frontend-540.jpg  540w,
+            images/team/frontend-810.jpg  810w 
+            "
+              src="images/team/frontend-270.jpg" alt="Девушка в очках"
+              sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
+              > -->
+
+            <img srcset="images/team/frontend-270.jpg 1x, images/team/frontend-540.jpg 2x" src="images/team/frontend-270.jpg"
+              alt="Планшет и клавиатура">
+              
+            <div class="team__description">
+                <h3 class="title description__title">Ольга Репина</h3>
+                <p class="description__text">Frontend Developer</p>
                 <ul class="description__icons">
                   <li>
                     <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
@@ -187,120 +278,108 @@
                     </a>
                   </li>
                 </ul>
-              </div>
+            </div>
+
           </li>
-          <li class="team-card">
-              <img width="270" src="images/team/frontend.jpg" alt="Девушка в очках">
-              <div class="team__description">
-                  <h3 class="title description__title">Ольга Репина</h3>
-                  <p class="description__text">Frontend Developer</p>
-                  <ul class="description__icons">
-                    <li>
-                      <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
-                        <svg width="20" height="20">
-                          <use href="./images/icon/icons.svg#icon-instagram"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
-                        <svg width="20" height="20">
-                          <use href="./images/icon/icons.svg#icon-twitter"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
-                        <svg width="20" height="20">
-                          <use href="./images/icon/icons.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                    </li>
-                    <li>
-                      <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
-                        <svg width="20" height="20">
-                          <use href="./images/icon/icons.svg#icon-linkedin"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-              </div>
+          <li>
+                             
+              <!-- <img srcset="
+            images/team/marceting-270.jpg  270w,
+            images/team/marceting-540.jpg  540w,
+            images/team/marceting-810.jpg  810w 
+            "
+              src="images/team/marceting-270.jpg" alt="Улыбающийся парень"
+              sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
+              > -->
+
+              <img srcset="images/team/marceting-270.jpg 1x, images/team/marceting-540.jpg 2x" src="images/team/marceting-270.jpg"
+                alt="Планшет и клавиатура">
+              
+            <div class="team__description">
+              <h3 class="title description__title">Николай Тарасов</h3>
+            <p class="description__text">Marketing</p>
+            <ul class="description__icons">
+              <li>
+                <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
+                  <svg width="20" height="20">
+                    <use href="./images/icon/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
+                  <svg width="20" height="20">
+                    <use href="./images/icon/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
+                  <svg width="20" height="20">
+                    <use href="./images/icon/icons.svg#icon-facebook"></use>
+                  </svg>
+              </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
+                  <svg width="20" height="20">
+                    <use href="./images/icon/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            </div>
+
           </li>
-          <li class="team-card">
-              <div>
-                <img width="270" src="images/team/marceting.jpg" alt="Улыбающийся парень">
-                <div class="team__description">
-                  <h3 class="title description__title">Николай Тарасов</h3>
-                <p class="description__text">Marketing</p>
-                <ul class="description__icons">
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-facebook"></use>
-                      </svg>
+          <li>
+                              
+              <!-- <img srcset="
+            images/team/designer-270.jpg  270w,
+            images/team/designer-540.jpg  540w,
+            images/team/designer-810.jpg  810w 
+            "
+              src="images/team/designer-270.jpg" alt="Мужчина в очках с ухмылкой"
+              sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
+              > -->
+
+              <img srcset="images/team/designer-270.jpg 1x, images/team/designer-540.jpg 2x" src="images/team/designer-270.jpg"
+                alt="Планшет и клавиатура">
+              
+            <div class="team__description">
+                <h3 class="title description__title">Михаил Ермаков</h3>
+              <p class="description__text">UI Designer</p>
+              <ul class="description__icons">
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-instagram"></use>
+                    </svg>
                   </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                </div>
-          </li>
-          <li class="team-card">
-              <div>
-                <img width="270" src="images/team/designer.jpg" alt="Мужчина в очках с ухмылкой">
-                <div class="team__description">
-                  <h3 class="title description__title">Михаил Ермаков</h3>
-                <p class="description__text">UI Designer</p>
-                <ul class="description__icons">
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Инстаграм"> 
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-facebook"></use>
-                      </svg>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Тивттер">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-twitter"></use>
+                    </svg>
                   </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
-                      <svg width="20" height="20">
-                        <use href="./images/icon/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Фейсбук">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+                </li>
+                <li>
+                  <a href="#" class="social-icon" aria-label="Ссылка на Линкедин">
+                    <svg width="20" height="20">
+                      <use href="./images/icon/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </li>
         </ul>
       </div>
