@@ -1,0 +1,287 @@
+// Here located box & content alignment styles and their settings
+@mixin custom-flex-container($justify, $align, $direction, $wrap) {
+  // You can write own flex styles
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin centered-X-content {
+  // Box with centered content horizontally
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centered-Y-content {
+  // Box with centered content vertically
+  display: flex;
+  align-items: center;
+}
+
+@mixin centered-content {
+  // Box with centered content horizontally and vertically
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centered-text {
+  // Box with centered text horizontally and vertically
+  text-align: center;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Here located mixins for text styles (size, weight, line-height, color, align)
+@mixin custom-text($f-size, $f-weight, $line-h, $color, $align) {
+  // Custom text options.
+  font-size: $f-size;
+  font-weight: $f-weight;
+  line-height: $lin1e-height;
+  color: $color;
+  text-align: $align;
+}
+
+@mixin text-s($color) {
+  // Small text
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin text-normal($color) {
+  // Normal text
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin text-sm($f-weight, $color) {
+  // Bigger that normal text, can be Heading
+  font-size: $text-sm; // 24px
+  font-weight: $f-weight;
+  line-height: 28px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin text-md($f-weight, $color) {
+  // Medium text, mainly for headers
+  font-size: $text-md; // 36px
+  font-weight: $f-weight;
+  line-height: 42px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin text-xl($f-weight, $color) {
+  // Large text for headers
+  font-size: $text-xl; // 48px
+  font-weight: $f-weight;
+  line-height: 56px;
+  color: $color;
+  text-align: left;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Here located buttons styles and their settings
+@mixin custom-btn_fixed-size(
+  $btn-w,
+  $btn-h,
+  $btn-bg,
+  $btn-text-color,
+  $btn-text-size,
+  $btn-radius,
+  $shadow
+) {
+  // Custom button with fixed size (example: 200px/50px)
+  width: $btn-w;
+  height: $btn-h;
+  background: $btn-bg;
+  border-radius: $btn-radius;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  color: $btn-text-color;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin custom-btn_auto-size(
+  $padding-Y,
+  $padding-r,
+  $padding-l,
+  $btn-bg,
+  $btn-text-color,
+  $btn-text-size,
+  $btn-radius,
+  $shadow
+) {
+  // Custom button with auto size. The size is adjusted depending on the content.
+  padding-top: $padding-Y;
+  padding-bottom: $padding-Y;
+  padding-right: $padding-r;
+  padding-left: $padding-l;
+  background: $btn-bg;
+  border-radius: $btn-radius;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  color: $btn-text-color;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin btn-square($btn-w, $btn-bg) {
+  // Square buttom, with height = width (example: 48px/48px)
+  min-width: $btn-w;
+  min-height: $btn-w;
+  width: $btn-w;
+  height: $btn-w;
+  background: $btn-bg;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin btn-rounded($btn-w, $btn-bg) {
+  // Rounded button with radial border.
+  width: $btn-w;
+  height: $btn-w;
+  background: $btn-bg;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin btn-fixed-size_sm($btn-bg, $btn-text-color, $shadow) {
+  // Fixed size button. Used in modals, submits and tables.
+  display: block;
+  width: 145px;
+  height: 55px;
+  color: $btn-text-color;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 8px;
+  background: $btn-bg;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: 0.3s linear all;
+  white-space: nowrap;
+}
+
+@mixin btn-auto-size_xl($btn-bg, $btn-text-color, $shadow) {
+  // Big button. The size is adjusted depending on the content.
+  padding: 18px 40px 18px 40px;
+  background: $btn-bg;
+  color: $btn-text-color;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin btn-auto-size_sm($btn-bg, $btn-text-color, $shadow) {
+  // Medium button. The size is adjusted depending on the content.
+  padding: 16px 32px 16px 32px;
+  background: $btn-bg;
+  color: $btn-text-color;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+@mixin btn-auto-size_xs($btn-bg, $btn-text-color, $shadow) {
+  // Small button. The size is adjusted depending on the content.
+  padding: 10px 30px 10px 30px;
+  background: $btn-bg;
+  color: $btn-text-color;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Here located images styles and their settings
+@mixin custom-bg($bg_url, $bg_size, $bg-color, $bg-repeat, $bg-position) {
+  // You can write own styles for background
+  background-image: url($bg_url);
+  background-repeat: $bg-repeat;
+  background-attachment: inherit;
+  background-size: $bg_size;
+  background-color: $bg-color;
+  background-position: $bg-position;
+}
+
+@mixin bg-contain($bg_url, $bg-color, $bg-position) {
+  // Background contain styles
+  background-image: url($bg_url);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: $bg-position;
+  background-color: $bg-color;
+  background-size: contain;
+}
+
+@mixin bg-cover($bg_url, $bg-color, $bg-position) {
+  // Background cover styles
+  background-image: url($bg_url);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: $bg-position;
+  background-color: $bg-color;
+  background-size: cover;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin custom-img($obj-fit, $min-width, $min-height) {
+  // You can write own styles for images
+  min-width: $min-width;
+  min-height: $min-height;
+  object-fit: $obj-fit;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin square-img($img-w) {
+  // Square image with height = width
+  width: $img-w;
+  height: $img-w;
+  border-radius: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin img-contain {
+  // Contain image
+  object-fit: contain;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin img-cover {
+  // Cover image
+  object-fit: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+// utils
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/breakpoints';
+
+// Base-styles
+@import './base/reset';
+@import './base/base-styles';
+
+// Components
+@import './components/button';
+@import './components/modal';
+@import './components/footer';
+@import './components/header';
+@import './components/logo';
+
+// home-page
+@import './home-page/hero';
+@import './home-page/team';
+@import './home-page/clients';
+@import './home-page/services';
+@import './home-page/advantage';
+
+// portfolio-page
+@import './portfolio-page/menu';
+@import './portfolio-page/portfolio-cards';

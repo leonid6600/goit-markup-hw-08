@@ -1,0 +1,83 @@
+body {
+  position: relative;
+
+  font-family: $mainFont;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  background-color: var(--bg-color);
+  margin: 0;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+// Глобальное придание всем елемента типа рассчета блочных элементов border-box. Правильно делать именно так!!!!!!!!!!!
+html {
+  box-sizing: border-box;
+}
+
+* {
+  // Определяет как будет вычисляться общая ширина и высота элементов
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+
+  // Для ровности цифр в строке
+  font-variant-numeric: lining-nums;
+
+  // Придание тому, что выделено курсором определенного цвета
+  &::selection {
+    color: #ffffff;
+    background-color: var(--brand-color);
+  }
+}
+
+// Настраивает нормальное отображение картинок на всех экранах
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Сброс стилей у кнопок + придание вида курсора при наведении
+.primary,
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+// основной цвет заголовков
+.title {
+  color: var(--title);
+}
+
+// Основной стиль блоков сайта
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  outline: 1px dashed #f44336;
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+
+// Классы для быстрой раскраски элементов
+.brand-color {
+  color: var(--brand-color);
+}
