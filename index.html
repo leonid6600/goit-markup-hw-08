@@ -18,62 +18,65 @@
   <!-- Шапка -->
   <header class="header">
     <div class="container aligin">
-      <a href="./index.html" class="logo"><span class="brand-color">Web</span>Studio</a>
-           
-      <!-- (работает с помошюью скрипта "menu.js") -->
-      <div class="menu-container" id="menu-container" data-menu>
-        <nav>
-          <ul class="header-menu">
-            <li><a class="header-menu__link header-menu__link--current" href="./index.html">Студия</a></li>
-            <li><a class="header-menu__link" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="header-menu__link" href="/">Контакты</a></li>
+
+        <a href="./index.html" class="logo"><span class="brand-color">Web</span>Studio</a>
+            
+        <!-- (работает с помошюью скрипта "menu.js") -->
+        <div class="backdrop-menu">
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="header-menu">
+              <li><a class="header-menu__link header-menu__link--current" href="./index.html">Студия</a></li>
+              <li><a class="header-menu__link" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="header-menu__link" href="/">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <ul class="header-connection">
+            <li>
+              <a class="header-connection__link" href="mailto:info@devstudio.com">
+                <svg width="16" height="12" class="unit">
+                  <use href="./images/icon/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a class="header-connection__link" href="tel:+380961111111">
+                <svg width="10" height="16" class="unit">
+                  <use href="./images/icon/icons.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 20
+              </a>
+            </li>
+            <!-- Иконки соц. сетей в меню для мобилки -->
+            <ul class="menu-container__links">
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Инстаграм">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Тивттер">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Фейсбук">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Линкедин">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </ul>
-        </nav>
 
-        <ul class="header-connection">
-          <li>
-            <a class="header-connection__link" href="mailto:info@devstudio.com">
-              <svg width="16" height="12" class="unit">
-                <use href="./images/icon/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="header-connection__link" href="tel:+380961111111">
-              <svg width="10" height="16" class="unit">
-                <use href="./images/icon/icons.svg#icon-tel"></use>
-              </svg>
-              +38 096 111 11 20
-            </a>
-          </li>
-        </ul>
+        </div>
+        </div>
 
-        <!-- Иконки соц. сетей в меню для мобилки -->
-        <ul class="menu-container__links">
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Инстаграм">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Тивттер">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Фейсбук">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Линкедин">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-
-      </div>
 
       <!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
       <button tupe="button" class="burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
@@ -192,8 +195,9 @@
             sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
             > -->
 
-            <img srcset="images/team/produkt-270.jpg 1x, images/team/produkt-540.jpg 2x" src="images/team/produkt-270.jpg"
-              alt="Планшет и клавиатура">
+            <img srcset="images/team/produkt-270.jpg 1x, images/team/produkt-540.jpg 2x" 
+            src="images/team/produkt-270.jpg"
+            alt="Планшет и клавиатура">
             
             <div class="team__description">
               <h3 class="title description__title">Игорь Демьяненко</h3>
@@ -242,8 +246,9 @@
               sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
               > -->
 
-            <img srcset="images/team/frontend-270.jpg 1x, images/team/frontend-540.jpg 2x" src="images/team/frontend-270.jpg"
-              alt="Планшет и клавиатура">
+            <img srcset="images/team/frontend-270.jpg 1x, images/team/frontend-540.jpg 2x" 
+            src="images/team/frontend-270.jpg"
+            alt="Планшет и клавиатура">
               
             <div class="team__description">
                 <h3 class="title description__title">Ольга Репина</h3>
@@ -292,8 +297,9 @@
               sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
               > -->
 
-              <img srcset="images/team/marceting-270.jpg 1x, images/team/marceting-540.jpg 2x" src="images/team/marceting-270.jpg"
-                alt="Планшет и клавиатура">
+              <img srcset="images/team/marceting-270.jpg 1x, images/team/marceting-540.jpg 2x" 
+              src="images/team/marceting-270.jpg"
+              alt="Планшет и клавиатура">
               
             <div class="team__description">
               <h3 class="title description__title">Николай Тарасов</h3>
@@ -342,8 +348,9 @@
               sizes="(min-width: 1200px) 25vw, (min-width: 480px) 50vw, 100vw"
               > -->
 
-              <img srcset="images/team/designer-270.jpg 1x, images/team/designer-540.jpg 2x" src="images/team/designer-270.jpg"
-                alt="Планшет и клавиатура">
+              <img srcset="images/team/designer-270.jpg 1x, images/team/designer-540.jpg 2x" 
+              src="images/team/designer-270.jpg"
+              alt="Планшет и клавиатура">
               
             <div class="team__description">
                 <h3 class="title description__title">Михаил Ермаков</h3>
@@ -512,7 +519,7 @@
 
 
 <!-- Модальное окно! Оставьте свои данные мы вам перезвоним -->
-<div data-modal class="backdrop is-hidden">
+<div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button data-modal-close type="button" class="modal__close">
       <svg width="11" height="11">
@@ -587,6 +594,11 @@
         e.currentTarget.reset();
       });
   })();
+</script>
+
+<!-- Скрипт для добавления класса body при клике по бкргеру в моб. меню -->
+<script>
+  // document.body.classList.add('modal-open');
 </script>
 
 

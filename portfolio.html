@@ -18,63 +18,66 @@
   <!-- Шапка -->
   <header class="header">
     <div class="container aligin">
+
       <a href="./index.html" class="logo"><span class="brand-color">Web</span>Studio</a>
-    
+
       <!-- (работает с помошюью скрипта "menu.js") -->
-      <div class="menu-container" id="menu-container" data-menu>
-        <nav>
-          <ul class="header-menu">
-            <li><a class="header-menu__link" href="./index.html">Студия</a></li>
-            <li><a class="header-menu__link header-menu__link--current" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="header-menu__link" href="/">Контакты</a></li>
+      <div class="backdrop-menu is-hidden">
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="header-menu">
+              <li><a class="header-menu__link header-menu__link--current" href="./index.html">Студия</a></li>
+              <li><a class="header-menu__link" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="header-menu__link" href="/">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <ul class="header-connection">
+            <li>
+              <a class="header-connection__link" href="mailto:info@devstudio.com">
+                <svg width="16" height="12" class="unit">
+                  <use href="./images/icon/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a class="header-connection__link" href="tel:+380961111111">
+                <svg width="10" height="16" class="unit">
+                  <use href="./images/icon/icons.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 20
+              </a>
+            </li>
+            <!-- Иконки соц. сетей в меню для мобилки -->
+            <ul class="menu-container__links">
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Инстаграм">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Тивттер">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Фейсбук">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link__social" aria-label="Ссылка на Линкедин">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </ul>
-        </nav>
-  
-        <ul class="header-connection">
-          <li>
-            <a class="header-connection__link" href="mailto:info@devstudio.com">
-              <svg width="16" height="12" class="unit">
-                <use href="./images/icon/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="header-connection__link" href="tel:+380961111111">
-              <svg width="10" height="16" class="unit">
-                <use href="./images/icon/icons.svg#icon-tel"></use>
-              </svg>
-              +38 096 111 11 20
-            </a>
-          </li>
-        </ul>
-  
-        <!-- Иконки соц. сетей в меню для мобилки -->
-        <ul class="menu-container__links">
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Инстаграм">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Тивттер">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Фейсбук">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="#" class="link__social" aria-label="Ссылка на Линкедин">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-  
+
+        </div>
       </div>
-  
+
+
       <!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
       <button tupe="button" class="burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
@@ -82,7 +85,7 @@
           <use class="burger__close" href="./images/icon/icons.svg#icon-close-menu"></use>
         </svg>
       </button>
-    
+
     </div>
   </header>
   
@@ -329,7 +332,31 @@
 
   </div>
 </footer>
-  
+
+
+<!-- Подключение скрипта для работы модалки -->
+<script src="./js/modal.js"></script>
+<!-- Подключение скрипта для работы бургера  -->
+<script src="./js/menu.js"></script>
+
+<!-- Скрипт для временного изменения работы инпутов -->
+<script>
+  (() => {
+    document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+
+        e.currentTarget.reset();
+      });
+  })();
+</script>
+
+
   
 </body>
 </html>
