@@ -1,11 +1,12 @@
 // Модальное окно на главной стр
 .backdrop {
-  z-index: 4;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -13,41 +14,40 @@
   visibility: visible;
   backdrop-filter: blur(10px);
 
+  overflow-y: scroll;
+
   &.is-hidden {
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-
-    & .modal {
-      transform: translate(-50%, -50%) scale(0.8);
-    }
   }
-
-  overflow-y: scroll;
 }
 
 // Сама модалка
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
   background-color: var(--bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
 
-  @media screen and (min-width: $mobile) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+  margin-left: auto;
+  margin-right: auto;
 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
   @media screen and (min-width: $desktop) {
     width: 528px;
   }
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__close {
@@ -130,7 +130,6 @@
 
   // Cтиль инпута-Комметарий
   &.comment {
-    position: relative;
     resize: vertical;
     height: 120px;
     padding: 12px 16px;
@@ -147,8 +146,9 @@
 
 /* Стиль иконки в инпуте */
 .input__icon {
-  display: block;
   position: absolute;
+
+  display: block;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
@@ -168,7 +168,7 @@ textarea::placeholder {
 
 // Форма соглашения (чекбокс и лейбл к нему)
 .form__agreement {
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: 0) {
     font-size: 12px;
   }
 
@@ -190,6 +190,9 @@ textarea::placeholder {
     text-decoration: underline;
     cursor: pointer;
   }
+  .agreement__text-align {
+    text-align: left;
+  }
 }
 
 // Скрываем дефолтный чекбокс !!!!!!!!!!!! 100% ахуенным способом! !!!!!!!!!!!!!!!
@@ -206,7 +209,7 @@ textarea::placeholder {
 
 // Рисуем кастомный нечекнутый чекбокс
 .icon-check {
-  display: inline-block;
+  display: block;
   width: 16px;
   height: 15px;
   margin-right: 7px;

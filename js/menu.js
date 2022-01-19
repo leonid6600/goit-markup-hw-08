@@ -14,9 +14,9 @@
 })();
 
 
-(() => {
-  const menuBtnRef = document.querySelector("[data-menu-button]");
-    menuBtnRef.addEventListener("click", () => {
-      document.body.classList.toggle('modal-open');
-  });
-})();
+// (() => {
+//   const menuBtnRef = document.querySelector("[data-menu-button]");
+//     menuBtnRef.addEventListener("click", () => {
+//       document.body.classList.toggle('modal-open');
+//   });
+// })();
